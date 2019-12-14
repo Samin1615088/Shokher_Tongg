@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "257358743335",
+    "firebase_url": "https://shokher-tongg.firebaseio.com",
+    "project_id": "shokher-tongg",
+    "storage_bucket": "shokher-tongg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257358743335:android:d3550943d23b8dd608cb02",
+        "android_client_info": {
+          "package_name": "com.devNImas.shokhertongg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257358743335-qokp38k7pgipm46mgbm0jvatd2mckgn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devNImas.shokhertongg",
+            "certificate_hash": "453114043f6fd6ce0377af2cb6ced68a3bf24817"
+          }
+        },
+        {
+          "client_id": "257358743335-ahjt239u3spjovmp9rp9i9qqop8kaq02.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASXviVB-N07HrT83v7wjtjiRzbRC4-8bM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257358743335-ahjt239u3spjovmp9rp9i9qqop8kaq02.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

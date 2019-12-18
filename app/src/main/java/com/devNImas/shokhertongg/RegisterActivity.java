@@ -34,7 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         createAccountButton = findViewById(R.id.register_btn);
         inputName = findViewById(R.id.register_username_input);
-        inputPhoneNumber = findViewById(R.id.register_password_input);
+        inputPhoneNumber = findViewById(R.id.register_phone_number_input);
         inputPassword = findViewById(R.id.register_password_input);
         loadingBar = new ProgressDialog(this);
         createAccountButton.setOnClickListener(new View.OnClickListener() {
@@ -79,9 +79,9 @@ public class RegisterActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (!dataSnapshot.child("Users").child(phone).exists()) {
                     HashMap<String, Object> userDataMap = new HashMap<>();
+                    userDataMap.put("name", name);
                     userDataMap.put("phone", phone);
                     userDataMap.put("password", password);
-                    userDataMap.put("name", name);
 
                     rootRef.child("Users").child(phone).updateChildren(userDataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -91,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 Toast.makeText(RegisterActivity.this, "Congratulations, your account is created", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                                 startActivity(intent);
-                            }else{
+                            } else {
                                 loadingBar.dismiss();
                                 Toast.makeText(RegisterActivity.this, "Network Error: Please try again later", Toast.LENGTH_LONG).show();
 

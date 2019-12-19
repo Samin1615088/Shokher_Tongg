@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.devNImas.shokhertongg.Model.Users;
@@ -28,6 +29,7 @@ public class loginActivity extends AppCompatActivity {
     private EditText inputPhoneNumber, inputPassword;
     private ProgressDialog loadingBar;
     private String parentDbName = "Users";
+    private TextView adminLink, notAdminLink;
     private CheckBox chkBoxRememberMe;
 
     @Override
@@ -43,10 +45,32 @@ public class loginActivity extends AppCompatActivity {
         chkBoxRememberMe = findViewById(R.id.remember_me_chkb);
         Paper.init(this);
 
+        adminLink = findViewById(R.id.admin_panel_link);
+        notAdminLink = findViewById(R.id.not_admin_panel_link);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LoginUser();
+            }
+        });
+
+        adminLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginButton.setText("Admin Login");
+                adminLink.setVisibility(View.INVISIBLE);
+                notAdminLink.setVisibility(View.VISIBLE);
+                parentDbName = "Admins";
+            }
+        });
+        notAdminLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginButton.setText("Login");
+                notAdminLink.setVisibility(View.INVISIBLE);
+                adminLink.setVisibility(View.VISIBLE);
+                parentDbName = "Users";
             }
         });
 

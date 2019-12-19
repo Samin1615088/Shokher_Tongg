@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import io.paperdb.Paper;
+
 public class HomeActivity extends AppCompatActivity {
     private Button logoutBtn;
     @Override
@@ -15,10 +17,14 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         logoutBtn = findViewById(R.id.logout_btn);
+        Paper.init(this);
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Paper.book().destroy();
+
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(intent);
             }

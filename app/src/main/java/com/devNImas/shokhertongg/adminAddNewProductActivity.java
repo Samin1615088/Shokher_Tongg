@@ -11,7 +11,6 @@ public class adminAddNewProductActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_new_product);
-
-        Toast.makeText(adminAddNewProductActivity.this, "Welcome Admin", Toast.LENGTH_SHORT).show();
+        Toast.makeText(adminAddNewProductActivity.this, "Admin Panel", Toast.LENGTH_SHORT).show();
     }
 }

@@ -124,8 +124,8 @@ public class loginActivity extends AppCompatActivity {
                             }else if (parentDbName.equals("Users")){
                                 Toast.makeText(loginActivity.this, "Logged in successful", Toast.LENGTH_LONG).show();
                                 loadingBar.dismiss();
-                                Intent intent = new Intent(loginActivity.this, HomeActivity.class);
-                                startActivity(intent);
+                                //Intent intent = new Intent(loginActivity.this, HomeActivity.class);
+                                //startActivity(intent);
                             }
 
                         } else {
